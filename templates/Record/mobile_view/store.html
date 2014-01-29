@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../css/jquery.mobile-1.4.0.min.css" />
+<style type="text/css">
+<!--
+#wordmark {
+  position: relative;
+  margin: 0px auto;
+  text-align: center;
+  padding-top: 5px;
+}
+-->
+</style>
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery.mobile-1.4.0.min.js"></script>
+</head>
+ 
+
+<!-- PROBLEM: How do I get data from the database? -->
+<body>
+ 
+<div data-role="page" id="info" data-title="尋云拉贊網："> <!--print store title-->
+ 
+<div data-role="header" data-position="fixed">
+  <a href="#" onclick="history.back()" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+  <!--add logo img here-->
+  <h1>store1<!--print store title--></h1>
+  <a href="index.php" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true">Home</a>
+  <div data-role="navbar">
+    <ul>
+      <li><a data-icon="info" class="ui-state-persist" href="#info">Info</a></li>
+      <li><a data-icon="bars" href="#record">Past Records</a></li>
+      <li><a data-icon="comment" href="#comment">Comments</a></li>
+    </ul>
+  </div>
+</div>
+<div data-role="content">
+  <h3>store1</h3>
+  <p>地址</p>
+  <p>電話</p>
+  <p>地圖</p>
+  <p>名片</p>
+</div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar">
+    <ul>
+      <li><a data-icon="star" href="javascript:window.external.AddFavorite(window.document.location,window.document.title)">Fav</a></li>
+      <li><a data-icon="search" href="search.php">Search</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div data-role="page" id="record" data-title="尋云拉贊網："> <!--print store title-->
+ 
+<div data-role="header" data-position="fixed">
+  <a href="#" onclick="history.back()" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+  <!--add logo img here-->
+  <h1>store1<!--print store title--></h1>
+  <a href="index.php" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true">Home</a>
+  <div data-role="navbar">
+    <ul>
+      <li><a data-icon="info" href="#info">Info</a></li>
+      <li><a data-icon="bars" class="ui-state-persist" href="#record">Past Records</a></li>
+      <li><a data-icon="comment" href="#comment">Comments</a></li>
+    </ul>
+  </div>
+</div>
+<div data-role="content">
+  def
+</div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar">
+    <ul>
+      <li><a data-icon="star" href="javascript:window.external.AddFavorite(window.document.location,window.document.title)">Fav</a></li>
+      <li><a data-icon="search" href="search.php">Search</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div data-role="page" id="comment" data-title="尋云拉贊網："> <!--print store title-->
+ 
+<div data-role="header" data-position="fixed">
+  <a href="#" onclick="history.back()" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+  <!--add logo img here-->
+  <h1>store1<!--print store title--></h1>
+  <a href="index.php" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true">Home</a>
+  <div data-role="navbar">
+    <ul>
+      <li><a data-icon="info" href="#info">Info</a></li>
+      <li><a data-icon="bars" href="#record">Past Records</a></li>
+      <li><a data-icon="comment" class="ui-state-persist" href="#comment">Comments</a></li>
+    </ul>
+  </div>
+</div>
+<div data-role="content">
+  ghi
+</div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar">
+    <ul>
+      <li><a data-icon="star" href="javascript:window.external.AddFavorite(window.document.location,window.document.title)">Fav</a></li>
+      <li><a data-icon="search" href="search.php">Search</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+ 
+</body>
+</html>

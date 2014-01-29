@@ -1,7 +1,7 @@
 <?php
 	$districts = array('公館', '台電大樓', '新生南路', '後門、118巷', '科技大樓', '其他');
 	$page = 'home';
-	if (end(explode("/",$_SERVER['PHP_SELF'])) == 'district.php')||(end(explode("/",$_SERVER['PHP_SELF'])) == 'district2.php') {       // for disrict
+	if (end(explode("/",$_SERVER['PHP_SELF'])) == 'district.php') {       // for disrict
 		if (!isset($_GET['id'])) {
 			header('Location: index.php');
 		}else{

@@ -1,0 +1,55 @@
+{strip}<!DOCTYPE html>
+<html>
+<head>
+	{include file='header.tpl'}
+	<title>{$notebook->title|escape} - {$smarty.const.TITLE}</title>
+	<meta property="og:title" content="{$notebook->title|escape} - {$smarty.const.TITLE}"/>
+</head>
+<body>
+<div class="container">
+
+	<header class="page-header">
+		<h1>{$notebook->title|escape} <small>編輯</small></h1>
+	</header>
+
+	<ul class="breadcrumb">
+		<li><a href="{$smarty.const.BASE}">Home</a><span class="divider">/</span></li>
+		<li>
+			<a href="{$smarty.const.BASE}{$notebook->id}/{if $notebook->type=='tag'}TagStyle/{/if}">{$notebook->title|escape}</a><span class="divider">/</span>
+		</li>
+		<li class="active">編輯</li>
+	</ul>
+
+	<div class="row-fluid">
+		<div class="span12">
+			<form class="form-horizontal" action="{$smarty.const.BASE}{$notebook->id}/edit/post/" method="POST">
+				<div class="control-group">
+					<label class="control-label" for="inputTitle">標題</label>
+					<div class="controls">
+						<input class="span12" type="text" id="inputTitle" name="title" value="{$notebook->title|escape}">
+					</div>
+					<br />
+					<label class="control-label" for="textareaContent">內容</label>
+					<div class="controls">
+						<textarea class="span12" rows="30" id="textareaContent" name="content">{$notebook->content|escape}</textarea>
+					</div>
+					<br />
+					<label class="control-label" for="optionType">分類</label>
+					<div class="controls">
+						<select id="optionType" name="type">
+							<option {if $notebook->type == 'article'}selected{/if} value="article">Article</option>
+							<option {if $notebook->type == 'tag'}selected{/if} value="tag">Tag</option>
+						</select>
+					</div>
+					<br />
+					<div class="controls">
+						<button type="submit" class="btn btn-primary" name="submit" value="submit">修改完成</button>
+					</div>
+				</div>
+			</form>
+	</div>
+</div>
+
+</div>
+</body>
+</html>{/strip}

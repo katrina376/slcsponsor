@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../css/jquery.mobile-1.4.0.min.css" />
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery.mobile-1.4.0.min.js"></script>
+</head>
+ 
+
+<!-- PROBLEM: How do I get data from the database? -->
+<body>
+ 
+<div data-role="page" id="district" data-title="尋云拉贊網："> <!--print district title-->
+ 
+<div data-role="header" data-position="fixed">
+  <a href="#" onclick="history.back()" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+  <!--add logo img here-->
+  <h1>公館<!--print district title--></h1>
+  <a href="index.php" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true">Home</a>
+</div>
+<div data-role="content">
+  <ul data-role="listview"><!--print store, img, store id, and address-->
+    <li>
+      <a href="store.php?id=1">
+        <!--img-->
+        <h3>store1</h3>
+        <p>description</p>
+      </a>
+    </li>
+    <li>
+      <a href="store.php?id=2">
+        <!--img-->
+        <h3>store2</h3>
+        <p>description</p>
+      </a>
+    </li>
+  </ul>
+</div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar">
+    <ul>
+      <li><a data-icon="star" href="javascript:window.external.AddFavorite(window.document.location,window.document.title)">Fav</a></li>
+      <li><a data-icon="search" href="search.php">Search</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+ 
+</body>
+</html>
