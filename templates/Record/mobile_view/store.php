@@ -4,9 +4,7 @@
 <title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+<?php  include('_outer.php') ?>
 <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 <script src="https://jquery-ui-map.googlecode.com/svn-history/r306/trunk/ui/min/jquery.ui.map.full.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -45,24 +43,26 @@ $(document).ready(function(){
   $districtID = 1;
   $records = array('102-1' => '100')
 ?>
-<body onload="initialize()">
+<body>
  
+<div data-role="page" id="info" data-title="尋云拉贊網：<?= $title ?>">
 <?php
     $count = 0;
     include('_headerStore.php');
 ?><!--info-->
-<h3><?= $title ?></h3>
+<h3>基本資訊</h3>
 <div id="map_canvas" style="height:250px"></div>
 <p>地址：<span id="address"><?= $address ?></span></p>
 <p>電話：<?= $phone ?></p>
 <?php include('_footer.php') ?>
 
+<div data-role="page" id="record" data-title="尋云拉贊網：<?= $title ?>">
+
 <?php
     $count = 1;
     include('_headerStore.php');
 ?><!--record-->
-<h3><?= $title ?></h3>
-<h4>歷年贊助記錄</h4>
+<h3>歷年贊助記錄</h3>
 <ul data-role="listview">
 <?php foreach($records as $year => $record) { ?>
   <li><?= $year.'：'.$record.'元' ?></li>
@@ -70,13 +70,14 @@ $(document).ready(function(){
 </ul>
 <?php include('_footer.php') ?>
 
+<div data-role="page" id="comment" data-title="尋云拉贊網：<?= $title ?>">
+
 <?php
     $count = 2;
     include('_headerStore.php');
 ?><!--comment-->
 
-<h3><?= $title ?></h3>
-<h4>留言與評論</h4>
+<h3>留言</h3>
 <div data-role="collapsible" data-expanded-icon="comment" data-collapsed-icon="comment" data-iconpos="right">
   <h4>我要留言</h4>
   <form>

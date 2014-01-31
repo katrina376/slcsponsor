@@ -1,4 +1,3 @@
-<div data-role="page" id="<?= $pages[$count] ?>" data-title="尋云拉贊網：<?= $title ?>">
 <div data-role="header" data-position="fixed">
 <?php include('_headerMain.php') ?>
   <div data-role="navbar">
